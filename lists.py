@@ -32,6 +32,10 @@ l3[::-1] # Another way to reverse a list.
 
 l3.pop(3) # Remove and return item at index (defaults to the last item).
 
+lst = []
+if not lst:
+    print("List is empty!")
+
 if 3 in l3:
     print('Found!')
 
@@ -42,3 +46,39 @@ for item in l3:
 l4 = [1,2]
 l5 = [3,4]
 mixedList = l4 + l5 # [1,2,3,4]
+
+#### Slicing ####
+"""
+Lists allow to use slice notation as lst[start:end:step].
+The output of the slice notation is a new list containing elements from index start to end-1.
+If options are omitted start defaults to beginning of list, end to end of list and step to 1.
+"""
+
+lst = [1, 2, 3, 4]
+lst[1:] # [2, 3, 4]
+lst[:3] # [1, 2, 3]
+lst[::2] # [1, 3]
+lst[::-1] # [4, 3, 2, 1]
+lst[-1:0:-1] # [4, 3, 2]
+lst[5:8] # [] since starting index is greater than length of lst, returns empty list
+lst[1:10] # [2, 3, 4] same as omitting ending index
+
+#### List Comparisons ####
+[1, 10, 100] < [2, 10, 100] # True, because 1 < 2
+[1, 10, 100] < [1, 10, 100] # False, because the lists are equal
+[1, 10, 100] <= [1, 10, 100] # True, because the lists are equal
+[1, 10, 100] < [1, 10, 101] # True, because 100 < 101
+[1, 10, 100] < [0, 10, 100] # False, because 0 < 1
+# If one of the lists is contained at the start of the other, the shortest list wins.
+
+#### List Comprehensions ####
+# A list comprehension creates a new list by applying an expression to each element of an iterable.
+
+squares = [x * x for x in (1, 2, 3, 4)] # [1, 4, 9, 16]
+[s.upper() for s in "Hello"] # ['H','E','L','L','O']
+[x if x in 'accept' else '*' for x in 'apple'] # ['a', '*', '*', 'e', '*', '*']
+
+# Conditional List Comprehension:
+[x for x in range(10) if x % 2 == 0]
+[x if x % 2 == 0 else None for x in range(10)]
+[2 * (x if x % 2 == 0 else -1) + 1 for x in range(10)]
