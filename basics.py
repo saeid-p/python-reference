@@ -22,6 +22,7 @@ c2 = 100 + 10j
 
 str1 = 'hello' # typeof(str1) = <type 'str'>
 print('Is str?', isinstance(str1, str)) # True
+print('Is str?', str1 is str) # True
 
 # With one letter labels in front of the quotes, you can tell what type of string you want to define.
 'foo \n bar' # results str. The escaped character will be considered.
@@ -40,6 +41,7 @@ nullValue = None # Null values are defined as 'None'
 print('nullValue', nullValue) # Output: None, typeof(nullValue) = <class 'NoneType'>
 print('Value is None', nullValue is None) # True
 print('Value is not None', nullValue is not None) # False
+print('!=', 1 != 2) # True
 
 # You can have multiple assignments. If the count of two sides don't match, and error will be thrown.
 a, b, c = 1,2,3
@@ -71,11 +73,17 @@ else:
 if a > b: print(a)
 else: print(b)
 
+# Ternary operation:
+print(1) if a > b else print(b)
+
 if x and y:
     print(x)
 
 if x or y:
     print(y)
+
+if 3.14 < x < 3.142:
+    print("x is near pi")
 
 # Type Casting:
 val1 = '123'
@@ -85,6 +93,9 @@ val3 = float('12.35')
 list(str1) # ['h', 'e', 'l', 'l', 'o']
 set(str1) # {'o', 'e', 'l', 'h'}
 tuple(str1) # ('h', 'e', 'l', 'l', 'o')
+
+temp = 100
+del temp # del removes the variable from its scope.
 
 # An object is hashable if it has a hash value which never changes during its lifetime
 # It needs a __hash__() method, and can be compared to other objects (it needs an __eq__() method).
