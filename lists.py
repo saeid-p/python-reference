@@ -19,8 +19,8 @@ l3.append(2)
 l3.append(3)
 l3.append(4)
 l3.append(4)
-l3.insert(0, 1)
-# l3 = [1,2,3,4,4]
+l3.insert(0, 1) 
+print('l3', l3) # [1,2,3,4,4]
 
 lenOfList = len(l3) # 5
 occurrences = l3.count(4) # 2
@@ -32,6 +32,9 @@ l3[::-1] # Another way to reverse a list.
 
 l3.pop(3) # Remove and return item at index (defaults to the last item).
 
+if 3 in l3:
+    print('Found!')
+
 # Iteration:
 for item in l3:
-    print(item)
+    print('item', item)
