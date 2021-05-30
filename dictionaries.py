@@ -19,3 +19,13 @@ d2 = {
 
 for key in d2.keys():
     print('Key: \'{}\' - Value: \'{}\''.format(key, d2[key]))
+    
+# A defaultdict is a dictionary with a default value for keys.
+# Keys for which no value has been explicitly defined can be accessed without errors.
+from collections import defaultdict
+
+dd1 = defaultdict(lambda: -1)
+dd1[1] = 5
+
+print('dd1[1]', dd1[1]) # 5
+print('dd1[2]', dd1[2]) # -1
