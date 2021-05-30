@@ -17,3 +17,7 @@ print(t3 == t2[3]) # True
 t4 = (3,4)
 t5 = t3 + t4
 print(t5) # (1,2,3,4)
+
+#### Packing & Unpacking ####
+t6 = (1,2,3)
+num1,num2,num3 = t6
