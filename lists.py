@@ -38,3 +38,7 @@ if 3 in l3:
 # Iteration:
 for item in l3:
     print('item', item)
+    
+l4 = [1,2]
+l5 = [3,4]
+mixedList = l4 + l5 # [1,2,3,4]
