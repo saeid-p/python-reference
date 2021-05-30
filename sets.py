@@ -20,3 +20,7 @@ if 1 in s2:
 # You can iterate like a list, but the values will be in an arbitrary order.
 for item in s2:
     print(item)
+    
+# Frozen sets are immutable and new elements cannot added after its defined.
+fs2 = frozenset(s2)
+print(fs2)
