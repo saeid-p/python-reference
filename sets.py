@@ -9,7 +9,6 @@ print(s1) # {1,2,3}
 
 print(s1.pop()) # Remove an arbitrary element from the set.
 
-
 l1 = [1,2,3]
 s2 = set(l1)
 print(s2) # {1,2,3}
