@@ -1,3 +1,7 @@
+# Get user input from console.
+userInput = input('Provide some values: ')
+print('User input: \'{}\''.format(userInput))
+
 # Variable names are case sensitive and can start with _
 _variable1 = 'My Special Variable.'
 
