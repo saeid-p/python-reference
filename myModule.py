@@ -12,9 +12,6 @@ import myModule
 myModule.__doc__ # This is the module docstring.
 myModule.welcome.__doc__ # This is the function docstring.
 
-class MyClass(object):
-    pass
-
 # Specific functions of a module can be imported.
 from myModule import welcome
 welcome()
