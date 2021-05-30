@@ -18,4 +18,4 @@ d2 = {
 }
 
 for key in d2.keys():
-    print('Key: \'{}\' - Value: \'{}\''.format(key, d2[key]))    
+    print('Key: \'{}\' - Value: \'{}\''.format(key, d2[key]))
