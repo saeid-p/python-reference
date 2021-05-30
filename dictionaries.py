@@ -47,3 +47,8 @@ od1['first'] = 1
 od1['second'] = 2
 od1['third'] = 3
 od1['last'] = 4
+
+#### Dictionary Comprehensions ####
+# Dictionary comprehension creates a new dictionary by applying an expression to each element of an iterable.
+dc1 = {x: x * x for x in (1, 2, 3, 4)}
+dc2 = {name: len(name) for name in ('Stack', 'Overflow', 'Exchange') if len(name) > 6}
