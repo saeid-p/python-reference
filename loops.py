@@ -1,4 +1,3 @@
-
 i = 0
 while i < 7:
     print(i)
@@ -24,3 +23,20 @@ for i in range(3):
     # Through a break statement or by raising an exception.
 else:
     print('All good!')
+    
+# You can loop over a list of tuples this way:
+collection = [('a', 'b', 'c'), ('x', 'y', 'z'), ('1', '2', '3')]
+for i1, i2, i3 in collection:
+    print(i1,i2,i3)
+
+#### Special Indexes ####
+list = ['alpha', 'bravo', 'charlie', 'delta', 'echo']
+for s in list:
+    print('First', s[:1])
+    print('Last', s[-1:])
+    print('Skip first', s[1:])
+    print('Skip last', s[:-1])
+
+#### Iteration with index ####
+for index, element in enumerate(list):
+    print(index, element)
