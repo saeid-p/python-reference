@@ -34,3 +34,27 @@ if os.path.isfile(path):
 
 if os.path.exists(path):
     print('Exists!')
+    
+#### Text Processing ####
+
+with open(filePath, 'r') as file:
+    for line in file:
+        segments = line.split('|')
+        for segment in segments:
+            print(segment)
+            
+#### JSON Processing ####
+import json
+
+with open(filePath, 'r') as file:
+    for line in file:        
+        payload = json.loads(line)
+        print(payload["00020001"])
+
+#### CSV File Processing ####
+import csv
+
+with open(filePath) as file:
+    csvReader = csv.reader(file)
+    for row in csvReader:
+        print(row[0])
