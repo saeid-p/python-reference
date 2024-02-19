@@ -100,3 +100,8 @@ del temp # del removes the variable from its scope.
 # An object is hashable if it has a hash value which never changes during its lifetime
 # It needs a __hash__() method, and can be compared to other objects (it needs an __eq__() method).
 # Hashable objects which compare equality must have the same hash value.
+
+# Joining string array
+string_list = ["Hello", "World", "Python", "Programming"]
+delimiter = " "
+result_string = delimiter.join(string_list)
