@@ -6,6 +6,7 @@ from datetime import datetime, timedelta, timezone
 dt1 = datetime.strptime("2016-04-15T08:27:18-0500", "%Y-%m-%dT%H:%M:%S%z")
 
 now = datetime.now()
+now_iso = now.isoformat()
 then = datetime(2016, 5, 23)
 
 #### Date Delta ####
@@ -49,3 +50,18 @@ print(dt2.tzname()) # UTC-08:00
 # For zones with daylight savings time, python standard libraries do not provide a standard class.
 # 'pytz' and 'dateutil' are popular libraries providing time zone classes.
 # https://dateutil.readthedocs.io/en/stable/tz.html
+
+# pip install pytz
+from datetime import datetime
+import pytz
+
+# Specify the desired timezone (e.g., 'UTC' or 'America/New_York')
+desired_timezone = pytz.timezone('UTC')
+
+# Get the current time in the specified timezone
+current_time_with_timezone = datetime.now(desired_timezone)
+
+# Format the current time with timezone in ISO format
+current_time_iso_with_timezone = current_time_with_timezone.isoformat()
+
+print(current_time_iso_with_timezone)
