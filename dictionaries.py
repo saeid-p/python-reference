@@ -1,4 +1,4 @@
-from collections import defaultdict, OrderedDict
+from collections import defaultdict, OrderedDict, Counter
 
 # Dictionaries are unordered collection of unique key-value pairs; keys must be hashable.
 d1 = {1: "one", 2: "two"}
@@ -44,3 +44,15 @@ od1["last"] = 4
 # Dictionary comprehension creates a new dictionary by applying an expression to each element of an iterable.
 dc1 = {x: x * x for x in (1, 2, 3, 4)}
 dc2 = {name: len(name) for name in ("Stack", "Overflow", "Exchange") if len(name) > 6}
+
+# Counter is a dictionary subclass that counts hashable objects.
+elements = ["apple", "banana", "apple", "orange", "banana", "apple"]
+
+# Create a Counter object
+counter = Counter(elements)
+
+print(counter)  # Counter({'apple': 3, 'banana': 2, 'orange': 1})
+
+# Most common elements
+most_common_elements = counter.most_common(2)
+print(most_common_elements)  # [('apple', 3), ('banana', 2)]
